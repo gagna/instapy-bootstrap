@@ -31,27 +31,6 @@ pods_comments_list = [line.rstrip("\n") for line in open("pods_comments.txt")]
 # ------------------------------------------------------------------------
 
 """
-Like the last two post of your friends
-"""
-
-friendship = InstaPy(
-    username=insta_username,
-    password=insta_password,
-    disable_image_load=True,
-    headless_browser=True,
-    multi_logs=True,
-)
-
-with smart_run(friendship):
-    friendship.set_relationship_bounds(enabled=False)
-    friendship.set_skip_users(skip_private=False)
-    friendship.set_do_like(True, percentage=100)
-    friendship.follow_by_list(friends_list, times=1, sleep_delay=60, interact=False)
-    friendship.interact_by_users(friends_list, amount=2, randomize=False)
-
-# ------------------------------------------------------------------------
-
-"""
 Real botting session
 """
 
@@ -88,6 +67,7 @@ with smart_run(bottingSession):
         peak_unfollows=(35, 402),
         peak_server_calls=(None, 4700)
     )
+    
     bottingSession.set_skip_users(skip_private=False)
     bottingSession.set_simulation(enabled=False)
     # ------------------------------------------------------------------------

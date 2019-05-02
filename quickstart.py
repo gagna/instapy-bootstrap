@@ -1,3 +1,7 @@
+"""
+This template is written by gagna
+
+"""
 # imports
 import random
 from instapy import InstaPy
@@ -71,7 +75,19 @@ with smart_run(bottingSession):
         min_followers=25,
         min_following=25
     )
-
+    
+    bottingSession.set_quota_supervisor(
+    	enabled=True,
+        sleep_after=["likes", "comments_d", "follows", "unfollows", "server_calls_h"], 
+        sleepyhead=True, 
+        stochastic_flow=True, 
+        notify_me=True,
+        peak_likes=(57, 585),
+        peak_comments=(21, 182),
+        peak_follows=(48, None),
+        peak_unfollows=(35, 402),
+        peak_server_calls=(None, 4700)
+    )
     bottingSession.set_skip_users(skip_private=False)
     bottingSession.set_simulation(enabled=False)
     # ------------------------------------------------------------------------

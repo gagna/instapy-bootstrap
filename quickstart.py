@@ -144,6 +144,7 @@ with smart_run(bottingSession):
     # like by feed
 
     #bottingSession.like_by_feed(amount=100, randomize=True, unfollow=True, interact=True)
+    
     # ------------------------------------------------------------------------
 
     # actions by locations
@@ -159,6 +160,7 @@ with smart_run(bottingSession):
     )
 
     #session.comment_by_locations(random.choices(locations_list, k=3), amount=100)
+    
     # ------------------------------------------------------------------------
 
     # follow someone else's followers
@@ -170,6 +172,8 @@ with smart_run(bottingSession):
         sleep_delay=600,
         interact=True,
     )
+    
+    # ------------------------------------------------------------------------
     
     # unfollowing
 
@@ -188,6 +192,8 @@ with smart_run(bottingSession):
         unfollow_after=48 * 60 * 60,
         sleep_delay=120,
     )
+    
+    # ------------------------------------------------------------------------
     
     """ 
     InstaPy Pods

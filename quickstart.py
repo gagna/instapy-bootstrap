@@ -147,9 +147,7 @@ with smart_run(bottingSession):
     # actions by locations
 
     bottingSession.like_by_locations(
-        random.choices(locations_list, k=3),
-        amount=random.randint(10, 120),
-        skip_top_posts=False,
+        random.choices(locations_list, k=3), amount=random.randint(10, 120), skip_top_posts=False
     )
     bottingSession.follow_by_locations(random.choices(locations_list, k=3), amount=100)
 

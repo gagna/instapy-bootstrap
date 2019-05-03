@@ -34,11 +34,12 @@ pods_comments_list = [line.rstrip("\n") for line in open("txt_files/pods_comment
 Real botting session
 """
 
-bottingSession = InstaPy(username=insta_username,
-                  password=insta_password,
-                  disable_image_load=True,
-                  headless_browser=True,
-                  multi_logs=True,
+bottingSession = InstaPy(
+    username=insta_username,
+    password=insta_password,
+    disable_image_load=True,
+    headless_browser=True,
+    multi_logs=True,
 )
 
 with smart_run(bottingSession):
@@ -170,6 +171,14 @@ with smart_run(bottingSession):
     )
     
     # ------------------------------------------------------------------------
+        
+    """ 
+    InstaPy Pods
+    """
+    bottingSession.set_comments(pods_comments_list, media='Photo')
+    bottingSession.join_pods()
+
+    # ------------------------------------------------------------------------
     
     # unfollowing
 
@@ -189,12 +198,4 @@ with smart_run(bottingSession):
         sleep_delay=120,
     )
     
-    # ------------------------------------------------------------------------
-    
-    """ 
-    InstaPy Pods
-    """
-    bottingSession.set_comments(pods_comments_list, media='Photo')
-    bottingSession.join_pods()
-
     # ------------------------------------------------------------------------

@@ -44,18 +44,6 @@ friendship = InstaPy(
 )
 
 with smart_run(friendship):
-    friendship.set_quota_supervisor(
-        enabled=True,
-        sleep_after=["likes", "comments_d", "follows", "unfollows", "server_calls_h"],
-        sleepyhead=True,
-        stochastic_flow=True,
-        notify_me=True,
-        peak_likes=(57, 585),
-        peak_comments=(21, 182),
-        peak_follows=(48, None),
-        peak_unfollows=(35, 402),
-        peak_server_calls=(None, 4700),
-    )
     friendship.set_relationship_bounds(enabled=False)
     friendship.set_skip_users(skip_private=False)
     friendship.set_do_like(True, percentage=100)

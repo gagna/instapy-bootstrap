@@ -2,7 +2,9 @@
 This template is written by gagna
 
 """
-# imports
+"""
+Imports
+"""
 import random
 
 from basic_settings import InstaPy, smart_run, set_workspace
@@ -117,6 +119,9 @@ with smart_run(bottingSession):
     # bottingSession.set_smart_hashtags(smart_hashtags_list, limit=3, sort='top', log_tags=True)
     # bottingSession.set_smart_location_hashtags(smart_locations_list, radius=20, limit=10)
     # ------------------------------------------------------------------------
+    """
+    ------------------------------------------------------------------------
+    """
 
     """
     Actions
@@ -160,7 +165,9 @@ with smart_run(bottingSession):
         interact=True,
     )
 
-    # ------------------------------------------------------------------------
+    """
+    ------------------------------------------------------------------------
+    """
 
     """ 
     InstaPy Pods
@@ -188,4 +195,6 @@ with smart_run(bottingSession):
         sleep_delay=600,
     )
 
-    # ------------------------------------------------------------------------
+    """
+    ------------------------------------------------------------------------
+    """

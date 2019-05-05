@@ -2,7 +2,9 @@
 This template is written by gagna
 
 """
-# imports
+"""
+Imports
+"""
 from basic_settings import InstaPy, smart_run, set_workspace
 
 from basic_settings import (
@@ -20,6 +22,10 @@ from basic_settings import (
     mandatory_words_list,
     pods_comments_list,
 )
+
+"""
+------------------------------------------------------------------------
+"""
 
 """
 Like the last two post of your friends
@@ -52,4 +58,6 @@ with smart_run(friendship):
     friendship.follow_by_list(friends_list, times=1, sleep_delay=60, interact=False)
     friendship.interact_by_users(friends_list, amount=2, randomize=False)
 
-# ------------------------------------------------------------------------
+"""
+------------------------------------------------------------------------
+"""

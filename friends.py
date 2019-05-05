@@ -1,10 +1,12 @@
 """
-This template is written by gagna
+This template is written by @il.gagna
 
+Please configure basic_settings.py first
 """
+
+""" Imports
 """
-Imports
-"""
+import random
 
 from instapy import set_workspace
 from instapy import InstaPy
@@ -24,21 +26,15 @@ from basic_settings import (
     vid_comments_list,
     mandatory_words_list,
     pods_comments_list,
+    white_list,
 )
 
-"""
-InstaPy workspace settings
+""" InstaPy workspace settings
 """
 set_workspace(path=None)
 
+""" Like the last two post of your friends
 """
-------------------------------------------------------------------------
-"""
-
-"""
-Like the last two post of your friends
-"""
-
 friendship = InstaPy(
     username=insta_username,
     password=insta_password,
@@ -65,7 +61,3 @@ with smart_run(friendship):
     friendship.set_do_like(True, percentage=100)
     friendship.follow_by_list(friends_list, times=1, sleep_delay=60, interact=False)
     friendship.interact_by_users(friends_list, amount=2, randomize=False)
-
-"""
-------------------------------------------------------------------------
-"""

@@ -47,30 +47,8 @@ session = InstaPy(
 with smart_run(session):
     """ Settings
     """
-    session.set_relationship_bounds(
-        enabled=True,
-        potency_ratio=-0.50,
-        delimit_by_numbers=True,
-        max_followers=2000,
-        max_following=3500,
-        min_followers=25,
-        min_following=25,
-    )
-
-    session.set_quota_supervisor(
-        enabled=True,
-        sleep_after=["likes", "comments_d", "follows", "unfollows", "server_calls_h"],
-        sleepyhead=True,
-        stochastic_flow=True,
-        notify_me=True,
-        peak_likes=(57, 585),
-        peak_comments=(21, 182),
-        peak_follows=(48, None),
-        peak_unfollows=(35, 402),
-        peak_server_calls=(None, 4700),
-    )
+    # put InstaPy set_* method here
 
     """ Actions
     """
-
     # put your bot actions here

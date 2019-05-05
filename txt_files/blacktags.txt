@@ -8,6 +8,3 @@ gun
 shoot
 slaughter
 pussy
-breakfast
-dinner
-lunch

@@ -3,8 +3,6 @@ This template is written by gagna
 
 """
 # imports
-import random
-
 from basic_settings import InstaPy, smart_run, set_workspace
 
 from basic_settings import (

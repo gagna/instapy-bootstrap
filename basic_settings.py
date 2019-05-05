@@ -1,11 +1,8 @@
-from instapy import set_workspace
-from instapy import InstaPy
-from instapy import smart_run
+"""
+Settings
 
-# set workspace folder at desired location (default is at your home folder)
-set_workspace(path=None)
-
-# login credentials
+Be sure to insert the right credentials
+"""
 insta_username = ""  # <- enter username here
 insta_password = ""  # <- enter password here
 
@@ -21,3 +18,4 @@ pic_comments_list = [line.rstrip("\n") for line in open("txt_files/pic_comments.
 vid_comments_list = [line.rstrip("\n") for line in open("txt_files/vid_comments.txt")]
 mandatory_words_list = [line.rstrip("\n") for line in open("txt_files/mandatory_words.txt")]
 pods_comments_list = [line.rstrip("\n") for line in open("txt_files/pods_comments.txt")]
+white_list = [line.rstrip("\n") for line in open("txt_files/whitelist.txt")]

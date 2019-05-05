@@ -5,7 +5,10 @@ This template is written by gagna
 """
 Imports
 """
-from basic_settings import InstaPy, smart_run, set_workspace
+
+from instapy import set_workspace
+from instapy import InstaPy
+from instapy import smart_run
 
 from basic_settings import (
     insta_password,
@@ -22,6 +25,11 @@ from basic_settings import (
     mandatory_words_list,
     pods_comments_list,
 )
+
+"""
+InstaPy workspace settings
+"""
+set_workspace(path=None)
 
 """
 ------------------------------------------------------------------------

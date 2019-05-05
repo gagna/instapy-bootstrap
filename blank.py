@@ -1,13 +1,16 @@
 """
-This template is written by gagna
+This template is written by @il.gagna
 
+Please configure basic_settings.py first
 """
 
+""" Imports
 """
-Imports
-"""
+import random
 
-from basic_settings import InstaPy, smart_run, set_workspace
+from instapy import set_workspace
+from instapy import InstaPy
+from instapy import smart_run
 
 from basic_settings import (
     insta_password,
@@ -23,32 +26,28 @@ from basic_settings import (
     vid_comments_list,
     mandatory_words_list,
     pods_comments_list,
+    white_list,
 )
 
+""" InstaPy workspace settings
 """
-------------------------------------------------------------------------
+set_workspace(path=None)
+
+""" Botting session
 """
 
-"""
-Real botting session
-"""
-
-bottingSession = InstaPy(
+session = InstaPy(
     username=insta_username,
     password=insta_password,
     disable_image_load=True,
     headless_browser=True,
     multi_logs=True,
 )
-"""
-------------------------------------------------------------------------
-"""
 
-with smart_run(bottingSession):
+with smart_run(session):
+    """ Settings
     """
-    Settings
-    """
-    bottingSession.set_relationship_bounds(
+    session.set_relationship_bounds(
         enabled=True,
         potency_ratio=-0.50,
         delimit_by_numbers=True,
@@ -58,7 +57,7 @@ with smart_run(bottingSession):
         min_following=25,
     )
 
-    bottingSession.set_quota_supervisor(
+    session.set_quota_supervisor(
         enabled=True,
         sleep_after=["likes", "comments_d", "follows", "unfollows", "server_calls_h"],
         sleepyhead=True,
@@ -70,22 +69,8 @@ with smart_run(bottingSession):
         peak_unfollows=(35, 402),
         peak_server_calls=(None, 4700),
     )
-    """
-    ------------------------------------------------------------------------
+
+    """ Actions
     """
 
-    """
-    Actions
-    """
-
-    # ------------------------------------------------------------------------
-
-    """ 
-    InstaPy Pods
-    """
-    bottingSession.set_comments(pods_comments_list, media="Photo")
-    bottingSession.join_pods()
-
-    """
-    ------------------------------------------------------------------------
-    """
+    # put your bot actions here

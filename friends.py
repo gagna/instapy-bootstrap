@@ -4,30 +4,24 @@ This template is written by gagna
 """
 # imports
 import random
-from instapy import InstaPy
-from instapy import smart_run
-from instapy import set_workspace
 
-# set workspace folder at desired location (default is at your home folder)
-set_workspace(path=None)
+from basic_settings import InstaPy, smart_run, set_workspace
 
-# login credentials
-insta_username = ""  # <- enter username here
-insta_password = ""  # <- enter password here
-
-# populate list from file
-friends_list = [line.rstrip("\n") for line in open("txt_files/friends.txt")]
-influencers_list = [line.rstrip("\n") for line in open("txt_files/influencers.txt")]
-blacktags_list = [line.rstrip("\n") for line in open("txt_files/blacktags.txt")]
-locations_list = [line.rstrip("\n") for line in open("txt_files/locations.txt")]
-hashtags_list = [line.rstrip("\n") for line in open("txt_files/hashtags.txt")]
-smart_hashtags_list = [line.rstrip("\n") for line in open("txt_files/smart_hashtags.txt")]
-smart_locations_list = [line.rstrip("\n") for line in open("txt_files/smart_locations.txt")]
-pic_comments_list = [line.rstrip("\n") for line in open("txt_files/pic_comments.txt")]
-vid_comments_list = [line.rstrip("\n") for line in open("txt_files/vid_comments.txt")]
-mandatory_words_list = [line.rstrip("\n") for line in open("txt_files/mandatory_words.txt")]
-pods_comments_list = [line.rstrip("\n") for line in open("txt_files/pods_comments.txt")]
-# ------------------------------------------------------------------------
+from basic_settings import (
+    insta_password,
+    insta_username,
+    friends_list,
+    influencers_list,
+    blacktags_list,
+    locations_list,
+    hashtags_list,
+    smart_hashtags_list,
+    smart_locations_list,
+    pic_comments_list,
+    vid_comments_list,
+    mandatory_words_list,
+    pods_comments_list,
+)
 
 """
 Like the last two post of your friends

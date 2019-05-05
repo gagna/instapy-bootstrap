@@ -35,7 +35,7 @@ set_workspace(path=None)
 
 """ Like the last two post of your friends
 """
-friendship = InstaPy(
+session = InstaPy(
     username=insta_username,
     password=insta_password,
     disable_image_load=True,
@@ -43,9 +43,9 @@ friendship = InstaPy(
     multi_logs=True,
 )
 
-with smart_run(friendship):
-    friendship.set_relationship_bounds(enabled=False)
-    friendship.set_skip_users(skip_private=False)
-    friendship.set_do_like(True, percentage=100)
-    friendship.follow_by_list(friends_list, times=1, sleep_delay=60, interact=False)
-    friendship.interact_by_users(friends_list, amount=2, randomize=False)
+with smart_run(session):
+    session.set_relationship_bounds(enabled=False)
+    session.set_skip_users(skip_private=False)
+    session.set_do_like(True, percentage=100)
+    session.follow_by_list(friends_list, times=1, sleep_delay=60, interact=False)
+    session.interact_by_users(friends_list, amount=2, randomize=False)

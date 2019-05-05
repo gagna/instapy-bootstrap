@@ -2,5 +2,8 @@
 .idea
 .vscode
 .bak
+
+# Python
+__pycache__
 prova.py
 prova*.py

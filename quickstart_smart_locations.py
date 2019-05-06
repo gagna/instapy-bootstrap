@@ -60,8 +60,14 @@ with smart_run(session):
     session.set_do_follow(enabled=True, percentage=40)
     session.set_do_like(enabled=True, percentage=80)
 
+    # Generate smart hashtags based on https://displaypurposes.com/maps ranking,
+    # banned and spammy tags are filtered out.
+    # (limit) defines amount limit of generated hashtags by location
+    # (log_tags) shows generated hashtags before use it
+    # (use_smart_location_hashtags) activates like_by_tag to use smart hashtags
+
     session.set_smart_location_hashtags(
-        ["204517928/chicago-illinois", "213570652/nagoya-shi-aichi-japan"], radius=20, limit=10
+        random.sample(smart_locations_list, 3), radius=20, limit=3, log_tags=True
     )
 
     """ Actions

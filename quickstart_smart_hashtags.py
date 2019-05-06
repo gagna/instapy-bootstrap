@@ -68,7 +68,7 @@ with smart_run(session):
     # (use_smart_hashtags) activates like_by_tag to use smart hashtags
 
     session.set_smart_hashtags(
-        random.sample(smart_hashtags_list, 3), limit=3, sort="top", log_tags=True
+        random.sample(smart_locations_list, 3), limit=3, sort="top", log_tags=True
     )
 
     """ Actions
